@@ -8,6 +8,8 @@ COPY ./package.json ./
 RUN npm install
 COPY ./ ./
 
+#Mapeamento automatico da porta
+EXPOSE 80
 
 # Tell the image what to do when it starts as a container
 CMD [ "npm", "run", "start" ]
