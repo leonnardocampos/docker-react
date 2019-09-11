@@ -14,5 +14,8 @@ RUN npm run build
 # Use an existing docker image as a base
 FROM nginx as run
 
+#Mapeamento automatico da porta
+EXPOSE 80
+
 # Documentação on dockerhub
 COPY --from=builder /app/build /usr/share/nginx/html 
